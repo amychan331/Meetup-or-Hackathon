@@ -1,2 +1,2 @@
 # Meetup-or-Hackathon
-A repo for codes that I worked on in Meetup, Hackathon, or other public events.
+A repo for the code I worked on for the Meetup event Pairup. Team member consisted of Amy Yuen Ying Chan, Lena Zheng, and Kai Yun Pekarsky. Project is a memory card game. 
