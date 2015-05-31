@@ -1,0 +1,85 @@
+<!-- 
+     The exercise is part of the Pair Up Javascript Level 2 Exercise. 
+     It was done in the last hour of the Pairup Meetup. Thus, it is INCOMPLETE!
+     This is just a record!
+
+     The team composed of Amy Yuen Ying Chan, Lena Zheng, and Kai Yun Pekarsky.
+     The goal is to create a member card game.
+     The cards should be inside a table, face-down.
+     When clicked, the card flips, showing an image sourced by an url that contain a number. 
+     If both cards that was selected has the same url number, the two card remains face-up.
+     The url should be inside an array. The url should be randomized. 
+     The code should include a click handler and a timeout handler.
+     
+     Images folder is not included because the images are randomly selected from Google based on which one looks the funnist for the team member at the time of Meetup.
+     As such, copyright cannot be determined.
+     However, image names are numbered from 1 to 8. If you want to play with this code, feel free to use any images you like. Have fun!
+-->      
+
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <meta charset="utf-8" />
+        <title></title>
+
+      <script>
+      var catpictures = [];
+      for(pix = 1; pix < 9; pix++){
+        var filename = "images/" + pix + ".jpg";
+        catpictures.push(filename);
+        catpictures.push(filename);
+
+      }
+
+      function shuffleArray(){
+        var ranNumArray = [];
+        var ranNum = Math.floor(Math.random()*9);
+        while (length(randomNumArray) < 17) {
+          var ranNum = Math.floor(Math.random()*9);
+          while (ranNumArray.indexOf(ranNum) < 0) {
+            var ranNum = Math.floor(Math.random()*9);
+          }
+          ranNumArray = push()
+        }
+
+
+        if (shuffled) {
+          // catpuctures already created and shuffled
+        } else {
+          var shuffled = [];
+          for (k = 0; k < 8; k++) {
+            shuffled = push(catpictures[]);
+          }
+        }
+
+      }
+
+      function createTable(){
+        var table = "<table>";
+        for (i = 0; i < 4; i++){
+          table += "<tr>";
+          for(j = 0; j < 4 ; j++){
+            var id = "kero"  + i.toString() + j.toString();
+            table += "<td><img src='images/kero.jpg' id='" + id + "'></td>" ;
+          }
+          table += "</tr>";
+        }
+        table += "</table>";
+
+        document.getElementById("output").innerHTML = table;
+
+      }
+
+      </script>
+      <style>
+      img {
+        max-width: 150px;
+        /*max-height: 150px;*/
+      }
+      </style>
+      </head>
+
+      <body onload="createTable()">
+        <div id="output"></div>
+      </body>
+      </html>
